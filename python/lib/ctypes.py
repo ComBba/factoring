@@ -2,6 +2,8 @@
 # CTypes and utility functions
 ################################################################################
 import ctypes
+import os
+import ctypes
 
 class CParams(ctypes.Structure):
     _fields_=[("hashRounds",ctypes.c_uint32 ),
@@ -53,6 +55,10 @@ def hashToArray( Hash ):
     
     return arr
 
-gHash = ctypes.CDLL("../libs/gHash.so").gHash
+# 현재 파일의 위치를 기준으로 상대 경로 설정
+current_dir = os.path.dirname(os.path.abspath(__file__))
+lib_path = os.path.join(current_dir, "../../libs/gHash.so")
+gHash = ctypes.CDLL(lib_path).gHash
+
 gHash.restype = uint1024
 
