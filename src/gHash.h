@@ -2,7 +2,7 @@
 #include <gmp.h>
 
 //Blake2b, Scrypt and SHA3-512
-#include "ptopp/cryptlib.h"
+#include "cryptopp/cryptlib.h"
 #include "cryptopp/sha3.h"
 #include "cryptopp/whrlpool.h"
 #include "cryptopp/scrypt.h"
