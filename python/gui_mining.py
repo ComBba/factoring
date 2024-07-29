@@ -14,7 +14,7 @@ class MiningThread(QThread):
 
     def run(self):
         self.process = subprocess.Popen(
-            [sys.executable, "FACTOR.py"],  # Adjust this to the path of your mining script
+            [sys.executable, "./python/FACTOR.py"],  # Adjust this to the path of your mining script
             stdout=subprocess.PIPE,
             stderr=subprocess.PIPE,
             universal_newlines=True
